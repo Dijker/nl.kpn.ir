@@ -52,9 +52,20 @@ module.exports = {
 				}]
 			}],
 			pair: {
-				viewOrder: ['generic_done'],
+				viewOrder: ['generic_check_device', 'generic_done'],
 				views: [{
-					template: './lib/433/pair/done.html',
+					template: './lib/pair/check_device.html',
+					options: {
+						title: 'views.generic_done.title',
+						device_exists_message: 'views.generic_check_device.device_exists_message',
+						prepend: '',
+						append: ''
+					},
+					prepend: [],
+					append: [],
+					id: 'generic_check_device'
+				}, {
+					template: './lib/pair/done.html',
 					options: {
 						title: 'views.generic_done.title',
 						prepend: '',
@@ -166,7 +177,8 @@ module.exports = {
 					'FUNCTION_B_1_',
 					'FUNCTION_C',
 					'FUNCTION_C_1_'
-				]
+				],
+				parseCmd: undefined
 			}
 		}
 	}
