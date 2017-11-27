@@ -22,7 +22,7 @@ const config = {
 			signal: {
 				id: 'kpn_settopbox',
 				type: 'prontohex',
-				repetitions: 1,
+				repetitions: 5,
 				options: {
 					emulateToggleBits: true,
 					cmdNumberPrefix: 'DIGIT_',
